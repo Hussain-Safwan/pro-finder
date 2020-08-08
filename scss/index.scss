@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: 68.75em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: rgba(245, 241, 241, 0.77);
+}
+.container {
+  width: 90%;
+  margin: auto;
+  background: white;
+  min-height: 100vh;
+  background: #fff;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 1350px) {
+    width: 95%;
+  }
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+}
+
+nav {
+  background-color: #24292e;
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem;
+  header {
+    display: flex;
+    align-items: center;
+    color: white;
+
+    font-size: 2.5rem;
+    padding: 1rem;
+
+    ion-icon {
+      font-size: 5.5rem;
+      padding: 0 1rem;
+    }
+    p {
+      align-self: center;
+    }
+  }
+}
+
+.searchGithubUsers {
+  background: rgba(245, 241, 241, 0.77);
+  padding: 2.2rem 1rem;
+  form {
+    max-width: 900px;
+    margin: auto;
+
+    display: flex;
+
+    .gitProfile-input {
+      width: 100%;
+
+      input {
+        border: none;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        height: 45px;
+        background: none;
+        font-family: inherit;
+        color: inherit;
+        font-size: 1.7rem;
+        border: 1.5px solid #4a535c;
+        border-right: 1.5px solid #24292e;
+        border-radius: 5px 0px 0px 5px;
+        letter-spacing: 0.5px;
+
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+
+    .gitProfile-btn {
+      cursor: pointer;
+      padding: 0.5rem 4rem;
+
+      @media (max-width: 400px) {
+        padding: 0.5rem 3.3rem;
+      }
+      display: flex;
+      align-items: center;
+      background-color: #24292e;
+      border-radius: 0px;
+      border-radius: 0px 5px 5px 0px;
+      transition: background-color 0.2s;
+
+      ion-icon {
+        font-size: 2.5rem;
+        color: white;
+      }
+
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
+
+.user-details {
+  display: flex;
+  max-width: 95%;
+
+  @media (max-width: 1300px) {
+    max-width: 98%;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+  margin: auto;
+  margin-top: 1.2vw;
+  .profile {
+    width: 32%;
+    @media (max-width: 1150px) {
+      width: 40%;
+    }
+    margin: 1rem;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+
+    @media (max-width: 500px) {
+      margin: 0;
+    }
+    color: #24292e;
+    font-size: 1.8rem;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 2rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 900px) {
+        width: 400px;
+      }
+
+      @media (max-width: 500px) {
+        width: 100%;
+        border-radius: 1rem;
+      }
+    }
+    > p {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .followers-stars {
+      margin-left: 1rem;
+      display: flex;
+      margin-bottom: 0.6rem;
+
+      p {
+        display: flex;
+        align-items: center;
+      }
+      span {
+        font-weight: bolder;
+        margin-right: 3px;
+      }
+      .dot {
+        margin: auto 5px;
+      }
+    }
+    .username {
+      color: #666;
+      font-size: 2.3rem;
+      margin-bottom: 2.5rem;
+
+      @media (max-width: 500px) {
+        margin-bottom: 2.1rem;
+      }
+    }
+    .name {
+      font-size: 3.5rem;
+      margin-bottom: 0px;
+      font-weight: bolder;
+    }
+    ion-icon {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.repo-container {
+  width: 68%;
+  @media (max-width: 1150px) {
+    width: 65%;
+  }
+  margin: 1rem;
+  @media (max-width: 900px) {
+    width: 100%;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+.repo-container {
+  padding-left: 2rem;
+
+  @media (max-width: 1100px) {
+    padding-left: 1rem;
+  }
+  .repo__heading {
+    text-align: center;
+    color: #383e56;
+    h2 {
+      font-size: 4rem;
+    }
+  }
+}
+.repos {
+  padding-top: 1.5rem;
+  .repo {
+    background: #ffffff;
+    box-shadow: inset -5px -5px 15px #d9d9d9, inset 5px 5px 15px #ffffff;
+    border-radius: 10px;
+    border: 1px solid rgb(233, 221, 221);
+    padding: 2.5rem 2rem;
+    margin-bottom: 1.2rem;
+    &_name {
+      padding-bottom: 2.5rem;
+      a {
+        text-decoration: none;
+        color: #364f6b;
+        font-size: 2.5rem;
+        letter-spacing: 0.7;
+        font-weight: bold;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+          text-decoration: none;
+          color: #2f445d;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    p {
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      color: rgb(92, 92, 92);
+
+      .circle {
+        padding: 1rem;
+        background: #f38181;
+        border-radius: 50%;
+        margin-right: 0.6rem;
+      }
+      ion-icon {
+        margin: auto 0.5rem auto 2rem;
+        font-size: 2rem;
+        color: #555;
+      }
+    }
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.loader svg {
+  height: 5.5rem;
+  width: 5.5rem;
+  fill: #2b2e4a;
+  transform-origin: 44% 50%;
+  animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
