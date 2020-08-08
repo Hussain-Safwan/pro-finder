@@ -48,7 +48,7 @@ $('.gitProfile-btn').click(async e => {
     <a href="#">${repoName}</a>
   </div>
   <p>
-    <span class="circle"></span> JavaScript
+    <span class="circle"></span> ${repo.language}
     <ion-icon name="star-outline"></ion-icon> ${repo.watchers}
     <ion-icon name="git-branch-outline"></ion-icon> ${repo.forks_count}
   </p>
