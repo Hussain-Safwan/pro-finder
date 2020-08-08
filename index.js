@@ -17,6 +17,7 @@ function hideLoader() {
 
 $('.gitProfile-btn').click(async e => {
   showLoader()
+  $('.repos').html('')
   const key = $('#gitProfile').val()
   console.log(key)
 
@@ -25,7 +26,15 @@ $('.gitProfile-btn').click(async e => {
 
   profile = profile.data
   repos = repos.data
-
+  repos.sort((a, b) => {
+    if (!a.language) {
+      return 1
+    } else if (!b.language) {
+      return -1
+    } else {
+      return 1
+    }
+  })
   // console.log(profile)
   $('.profile img').attr('src', profile.avatar_url)
   $('p.name').html(profile.name)
@@ -39,7 +48,6 @@ $('.gitProfile-btn').click(async e => {
  $('p.location').html(`<ion-icon name="location-outline"></ion-icon>${profile.location}`)
  $('p.mail').html(`<ion-icon name="mail-outline"></ion-icon>${profile.email}`)
 
- console.log(repos[0])
  repos.forEach(repo => {
    const repoName = repo.full_name.split('/')[1]
   //  console.log(repoName)
