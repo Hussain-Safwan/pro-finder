@@ -46,7 +46,6 @@ $('.gitProfile-btn').click(async e => {
   $('p.company').html(`<ion-icon name="business-outline"></ion-icon>
  ${profile.company}`)
  $('p.location').html(`<ion-icon name="location-outline"></ion-icon>${profile.location}`)
- $('p.mail').html(`<ion-icon name="mail-outline"></ion-icon>${profile.email}`)
 
  repos.forEach(repo => {
    const repoName = repo.full_name.split('/')[1]
