@@ -61,7 +61,7 @@ nav {
   padding: 0.3rem;
 }
 
-nav header {
+nav div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,37 +75,41 @@ nav header {
   padding: 1rem;
 }
 
-nav header ion-icon {
+nav div ion-icon {
   font-size: 5.5rem;
   padding: 0 1rem;
 }
 
-nav header p {
+nav div p {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
               -ms-grid-row-align: center;
           align-self: center;
 }
 
-.searchGithubUsers {
+.search-users {
   background: rgba(245, 241, 241, 0.77);
   padding: 2.2rem 1rem;
 }
 
-.searchGithubUsers form {
+.search-users form {
   max-width: 900px;
   margin: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.searchGithubUsers form .gitProfile-input {
+.search-users form .search-users__input {
   width: 100%;
 }
 
-.searchGithubUsers form .gitProfile-input input {
+.search-users form .search-users__input input {
   border: none;
   width: 100%;
   padding: 0.5rem 1rem;
@@ -120,41 +124,60 @@ nav header p {
   letter-spacing: 0.5px;
 }
 
-.searchGithubUsers form .gitProfile-input input:focus, .searchGithubUsers form .gitProfile-input input:active {
+.search-users form .search-users__input input:focus, .search-users form .search-users__input input:active {
   outline: none;
 }
 
-.searchGithubUsers form .gitProfile-btn {
-  cursor: pointer;
-  padding: 0.5rem 4rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+.search-users form .search-users__submit {
   background-color: #24292e;
   border-radius: 0px;
   border-radius: 0px 5px 5px 0px;
   -webkit-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  overflow: hidden;
+}
+
+.search-users form .search-users__submit button {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 5.1rem 0.5rem 4rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 @media (max-width: 400px) {
-  .searchGithubUsers form .gitProfile-btn {
+  .search-users form .search-users__submit button {
     padding: 0.5rem 3.3rem;
   }
 }
 
-.searchGithubUsers form .gitProfile-btn ion-icon {
+.search-users form .search-users__submit ion-icon {
   font-size: 2.5rem;
   color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.searchGithubUsers form .gitProfile-btn:hover {
+.search-users form .search-users__submit:hover {
   background-color: black;
 }
 
@@ -274,7 +297,7 @@ nav header p {
 .user-details .profile .username {
   color: #666;
   font-size: 2.3rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.3rem;
 }
 
 @media (max-width: 500px) {
@@ -294,19 +317,20 @@ nav header p {
   margin-right: 5px;
 }
 
-.repo-container {
+.repositories {
   width: 68%;
   margin: 1rem;
+  padding-left: 2rem;
 }
 
 @media (max-width: 1150px) {
-  .repo-container {
+  .repositories {
     width: 65%;
   }
 }
 
 @media (max-width: 900px) {
-  .repo-container {
+  .repositories {
     width: 100%;
     margin: 0;
     margin-top: 2rem;
@@ -314,22 +338,18 @@ nav header p {
   }
 }
 
-.repo-container {
-  padding-left: 2rem;
-}
-
 @media (max-width: 1100px) {
-  .repo-container {
+  .repositories {
     padding-left: 1rem;
   }
 }
 
-.repo-container .repo__heading {
+.repositories__heading {
   text-align: center;
   color: #383e56;
 }
 
-.repo-container .repo__heading h2 {
+.repositories__heading h2 {
   font-size: 4rem;
 }
 
@@ -339,8 +359,8 @@ nav header p {
 
 .repos .repo {
   background: #ffffff;
-  -webkit-box-shadow: inset -5px -5px 15px #d9d9d9, inset 5px 5px 15px #ffffff;
-          box-shadow: inset -5px -5px 15px #d9d9d9, inset 5px 5px 15px #ffffff;
+  -webkit-box-shadow: inset -2px -2px 12px #d9d9d9, inset 2px 2px 12px #ffffff;
+          box-shadow: inset -2px -2px 12px #d9d9d9, inset 2px 2px 12px #ffffff;
   border-radius: 10px;
   border: 1px solid #e9dddd;
   padding: 2.5rem 2rem;
@@ -453,4 +473,16 @@ nav header p {
          -o-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.bio {
+  font-size: 1.9rem;
+  letter-spacing: 0.3px;
+  padding-bottom: 1.3rem;
+}
+
+.notFound {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 4rem;
 }
